@@ -24,8 +24,8 @@ Many SKUs in the dataset have **very few examples**, resulting in a **long-tail 
 > 🔹 Hence, we focus our modeling on this dense portion of the data.  
 > 🔹 For the long-tail SKUs (< 50 examples), future work may include **text-based data augmentation**.
 <img width="624" height="139" alt="image" src="https://github.com/user-attachments/assets/c9193d4c-3109-41d8-86a0-2e455fb03762" />
-<img width="790" height="390" alt="image" src="https://github.com/user-attachments/assets/fbab1ba9-1649-41c1-8d2c-1481fb647a8d" />
-<img width="790" height="390" alt="image" src="https://github.com/user-attachments/assets/00bfc0ba-1b66-43de-9074-4e3d45a10cc9" />
+<img width="790" height="490" alt="image" src="https://github.com/user-attachments/assets/a57e3132-c1eb-48d2-83b8-5953cfdb6b77" />
+
 
 
 
