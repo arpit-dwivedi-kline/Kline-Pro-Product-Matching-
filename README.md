@@ -1,6 +1,5 @@
 # 🧠 KlinePro Product Matching Challenge — Team 3: *The Inference Club*
 
-Welcome to the official repository for the **Klinepro Product Matching Challenge**.  
 This repository contains experiments, solution notebooks, and performance evaluations contributed by **Team 3: _The Inference Club_**.
 
 ---
