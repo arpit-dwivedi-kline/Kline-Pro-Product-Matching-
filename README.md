@@ -32,7 +32,7 @@ The goal of this challenge is to **accurately match product descriptions (SKUs)*
 **Team 3 — The Inference Club**  
 - Arpit  
 - Mahika  
-- Prishtha  
+- Prestha  
 - Bimal  
 - Ernest  
 
