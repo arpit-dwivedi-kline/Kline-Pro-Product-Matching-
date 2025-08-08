@@ -84,19 +84,12 @@ Observations:
 
 ## 🧮 Final Threshold-wise Performance Table
 
-<img width="789" height="348" alt="image" src="https://github.com/user-attachments/assets/4543b097-f11e-4e58-b624-9d764994c4a3" />
+<!--<img width="789" height="348" alt="image" src="https://github.com/user-attachments/assets/4543b097-f11e-4e58-b624-9d764994c4a3" />-->
 
-| Threshold | Rows | False Positives | Accuracy |
-|----------:|------:|----------------:|---------:|
-| ≥ 1.00    | 16,093 | 30              | 99.81%   |
-| ≥ 0.95    | 18,616 | 200             | 98.93%   |
-| ≥ 0.70    | 25,851 | 811             | 96.86%   |
-| ≥ 0.50    | 26,009 | 821             | 96.84%   |
-| ≥ 0.30    | 34,532 | 3,232           | 96.38%   |
-| ≥ 0.20    | 65,641 | 21,922          | 90.64%   |
-| ≥ 0.10    | 120,000| 53,889          | 55.09%   |
+<img width="1061" height="324" alt="image" src="https://github.com/user-attachments/assets/c7e109b4-4c49-4fbb-8fb6-de962fd7adf2" />
 
----
+<img width="1089" height="485" alt="image" src="https://github.com/user-attachments/assets/e5d282d5-7df9-4393-8ddb-b6ccb71f4a68" />
+
 
 ## ✅ Conclusion
 
