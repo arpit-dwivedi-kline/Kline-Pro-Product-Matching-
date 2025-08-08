@@ -33,7 +33,23 @@ Many SKUs in the dataset have **very few examples**, resulting in a **long-tail 
 
 ## 🔁 End-to-End Pipeline Flow
 
+Our end-to-end flow 
 
+  Clean & filter: keep only mapped rows; parse sizes; validate barcodes.
+  
+  Build KB: one canonical text per master product (brand, product name, category, size…).
+  
+  Embed:
+  
+  KB texts → vectors (once).
+  
+  Source queries → vectors (per record).
+  
+  Index & retrieve: FAISS index over KB vectors (optionally per category shard); top-K (e.g., 50) per query.
+  
+  Re-rank: logistic regression uses features (fuzzy text sim, category/brand exact, size ratio, barcode hit) to score candidates.
+  
+  Decide + metrics: choose top-1 (Acc@1), also report Hit@5; apply confidence thresholds for production.
 <img width="530" height="1447" alt="image" src="https://github.com/user-attachments/assets/ef26666b-daaa-49b3-bdfd-6d9b49f19fcb" />
 
 ---
@@ -100,6 +116,27 @@ Observations:
   - Using vector quantization for larger-scale inference
   
 ---
+
+# Experimentation With Augmentation
+
+For SKUs with <50 train rows, synthesize new rows up to 50 using:
+
+Synonym swaps / word order shuffles / light typos in SourceDescription.
+
+Brand/alias swaps from master-side names.
+
+Size normalization & unit conversions (e.g., 500 ml ↔ 0.5 L) with consistent numeric source_ml.
+
+Safe noise (punctuation/spacing).
+<img width="764" height="393" alt="image" src="https://github.com/user-attachments/assets/03bb6636-3536-47da-ba79-36967d86cae2" />
+<img width="768" height="393" alt="image" src="https://github.com/user-attachments/assets/ceac8e51-8ad1-4ded-b0bf-e1eb384d8a6b" />
+
+<img width="1021" height="112" alt="image" src="https://github.com/user-attachments/assets/a0fac1a4-5aaf-48b4-a0e3-948764c922d1" />
+<img width="1076" height="320" alt="image" src="https://github.com/user-attachments/assets/b90a562d-fc19-4276-a88f-5acd08d81e54" />
+<img width="1089" height="484" alt="image" src="https://github.com/user-attachments/assets/37923ef1-6d72-4141-baa4-070c2ec22788" />
+
+
+De-duplicate and cap at 50.
 
 📁 **Files in this folder:**
 - `faiss_notebook.ipynb`: Complete pipeline code  
